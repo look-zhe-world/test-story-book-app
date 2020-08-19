@@ -1,10 +1,11 @@
 // 使用 csf 用法 component story format
 import React from "react";
-import Button, {
+import {
 	APPEARANCES,
 	AppearancesTypes,
 	SIZES,
 	SizesTypes,
+	Button,
 } from "./index";
 import {
 	withKnobs,

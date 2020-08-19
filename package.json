@@ -1,25 +1,13 @@
 {
-  "name": "story-book-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@xi22333/test-story-book-app",
+  "version": "1.0.5",
+  "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^10.4.8",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/testing-library__react": "^10.2.0",
-    "polished": "^3.6.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "polished": "^3.6.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc -p tsconfig.build.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -49,6 +37,15 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "3.4.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^10.4.8",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/testing-library__react": "^10.2.0",
     "@babel/core": "^7.11.1",
     "@storybook/addon-a11y": "^6.0.7",
     "@storybook/addon-actions": "^6.0.7",
@@ -64,6 +61,21 @@
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "typescript": "~3.7.2"
+  },
+  "peerDependencies": {
+		"react": ">=16.8.0",
+		"react-dom": ">=16.8.0",
+		"styled-components": "^5.1.1"
+  },
+  "files": [
+		"dist"
+  ],
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@xi22333"
   }
 }
