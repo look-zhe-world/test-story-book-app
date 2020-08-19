@@ -1,6 +1,6 @@
 {
-  "name": "@xi22333/test-story-book-app",
-  "version": "1.0.5",
+  "name": "@look-zhe-world/test-story-book-app",
+  "version": "1.0.0",
   "private": false,
   "dependencies": {
     "polished": "^3.6.5"
@@ -11,7 +11,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook-1": "build-storybook -s public",
+    "build-storybook": "build-storybook --no-dll --quiet",
     "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "eslintConfig": {
@@ -62,7 +63,9 @@
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.1",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "react": ">=16.8.0",
+		"react-dom": ">=16.8.0"
   },
   "peerDependencies": {
 		"react": ">=16.8.0",
@@ -76,6 +79,7 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@xi22333"
-  }
+    "registry": "https://npm.pkg.github.com/@look-zhe-world"
+  },
+  "author": "look-zhe-world<1015334621@qq.com>"
 }
