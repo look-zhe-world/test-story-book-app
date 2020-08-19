@@ -437,7 +437,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 
 
-export function Button(props: PropsWithChildren<ButtonProps>) {
+export default function Button(props: PropsWithChildren<ButtonProps>) {
 	const { isLoading, loadingText, isLink, children } = props;
 	const buttonInner = (
 		<>

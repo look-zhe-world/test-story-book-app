@@ -1,6 +1,6 @@
 {
   "name": "@look-zhe-world/test-story-book-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "dependencies": {
     "polished": "^3.6.5"
@@ -13,18 +13,19 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook-1": "build-storybook -s public",
     "build-storybook": "build-storybook --no-dll --quiet",
-    "coverage": "react-scripts test --coverage --watchAll=false"
+    "coverage": "react-scripts test --coverage --watchAll=false",
+    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "jest": {
-		"collectCoverageFrom": [
-			"!src/**/*.stories.tsx",
-			"src/**/*.tsx",
-			"!src/**/*.snap"
-		]
-	},
+    "collectCoverageFrom": [
+      "!src/**/*.stories.tsx",
+      "src/**/*.tsx",
+      "!src/**/*.snap"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -38,15 +39,6 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "3.4.3",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^10.4.8",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/testing-library__react": "^10.2.0",
     "@babel/core": "^7.11.1",
     "@storybook/addon-a11y": "^6.0.7",
     "@storybook/addon-actions": "^6.0.7",
@@ -59,21 +51,31 @@
     "@storybook/node-logger": "^6.0.7",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.7",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^10.4.8",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.1.2",
+    "@types/testing-library__react": "^10.2.0",
     "babel-loader": "^8.1.0",
-    "react-is": "^16.13.1",
-    "styled-components": "^5.1.1",
-    "typescript": "~3.7.2",
+    "coveralls": "^3.1.0",
     "react": ">=16.8.0",
-		"react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "react-is": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.1.1",
+    "typescript": "~3.7.2"
   },
   "peerDependencies": {
-		"react": ">=16.8.0",
-		"react-dom": ">=16.8.0",
-		"styled-components": "^5.1.1"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "styled-components": "^5.1.1"
   },
   "files": [
-		"dist"
+    "dist"
   ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

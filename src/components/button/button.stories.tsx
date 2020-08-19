@@ -1,6 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { Button } from "./index";
+import  Button  from "./index";
 
 // CSF 用法
 export default {
