@@ -92,6 +92,5 @@
     "contents": "dist",
     "tests": false,
     "yolo": false,
-    "yarn": true
 }
 }
