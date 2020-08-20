@@ -91,6 +91,6 @@
   "np": {
     "contents": "dist",
     "tests": false,
-    "yolo": false,
+    "yolo": false
 }
 }
