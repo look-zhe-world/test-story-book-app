@@ -87,5 +87,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@look-zhe-world"
   },
-  "author": "look-zhe-world<1015334621@qq.com>"
+  "author": "look-zhe-world<1015334621@qq.com>",
+  "np": {
+    "contents": "dist",
+    "tests": false,
+    "yolo": false,
+    "yarn": true
+}
 }
