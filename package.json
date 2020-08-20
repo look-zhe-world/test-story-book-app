@@ -1,6 +1,6 @@
 {
   "name": "@look-zhe-world/test-story-book-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "dependencies": {
     "@types/prismjs": "^1.16.1",
@@ -89,7 +89,6 @@
   },
   "author": "look-zhe-world<1015334621@qq.com>",
   "np": {
-    "contents": "dist",
     "tests": false,
     "yolo": false,
     "yarn": false,
