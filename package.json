@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -p tsconfig.build.json",
+    "build-tsc": "tsc -p tsconfig.build.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -17,7 +17,11 @@
     "build-storybook": "build-storybook --no-dll --quiet",
     "coverage": "react-scripts test --coverage --watchAll=false",
     "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "np-publish": "np 1.0.2-beta.3 --tag=beta --contents=dist"
+    "np-publish": "np 1.0.2-beta.3 --tag=beta --contents=dist",
+    "build-test": "microbundle build  --tsconfig tsconfig.build.json --jsx React.createElement",
+    "build-cjs": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false --format cjs",
+    "build-all": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false", 
+    "build": "npm run build-all & npm run build-cjs"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,7 +69,9 @@
     "@types/testing-library__react": "^10.2.0",
     "babel-loader": "^8.1.0",
     "coveralls": "^3.1.0",
+    "microbundle": "^0.12.3",
     "np": "^6.4.0",
+    "plop": "^2.7.4",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "react-is": "^16.13.1",
@@ -81,7 +87,9 @@
   "files": [
     "dist"
   ],
-  "module": "dist/index.js",
+  "module-1": "dist/index.js",
+  "main": "dist/test-story-book-app.modern.js.js",
+	"module": "dist/test-story-book-app.modern.js.modern.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
