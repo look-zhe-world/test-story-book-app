@@ -88,8 +88,8 @@
     "dist"
   ],
   "module-1": "dist/index.js",
-  "main": "dist/test-story-book-app.modern.js.js",
-  "module": "dist/test-story-book-app.modern.js.modern.js",
+  "main": "dist/test-story-book-app.js",
+  "module": "dist/test-story-book-app.modern.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
