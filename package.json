@@ -1,6 +1,6 @@
 {
   "name": "@look-zhe-world/test-story-book-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "dependencies": {
     "@types/prismjs": "^1.16.1",
@@ -20,7 +20,7 @@
     "np-publish": "np 1.0.2-beta.3 --tag=beta --contents=dist",
     "build-test": "microbundle build  --tsconfig tsconfig.build.json --jsx React.createElement",
     "build-cjs": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false --format cjs",
-    "build-all": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false", 
+    "build-all": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false",
     "build": "npm run build-all & npm run build-cjs"
   },
   "eslintConfig": {
@@ -89,7 +89,7 @@
   ],
   "module-1": "dist/index.js",
   "main": "dist/test-story-book-app.modern.js.js",
-	"module": "dist/test-story-book-app.modern.js.modern.js",
+  "module": "dist/test-story-book-app.modern.js.modern.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
