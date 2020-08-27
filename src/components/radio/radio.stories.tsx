@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Radio } from "./index";
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
+import { Radio } from "./index";
 import { action } from "@storybook/addon-actions";
 import { color } from "../shared/styles";
 import { Icon } from "../icon";
