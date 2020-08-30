@@ -286,3 +286,7 @@ export function Modal(props: PropsWithChildren<ModalProps>) {
 	}, [refCallback]);
 	return <>{render}</>;
 };
+
+Modal.defaultProps = {
+	container: document.body
+};
